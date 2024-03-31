@@ -1,5 +1,5 @@
-- 👋 Hi, I’m @aspandyar
-- 👀 I’m interested in Developing,DevOps, and Software Engineering
-- 🌱 I’m currently learning ML
+- 👋 Hi, I’m Stephen Novel
+- 👀 I’m interested in Developing, and DevOps
+- 🌱 I’m currently learning Golang
 - 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me search CV in my github repo
+- 📫 TG: @aspandyar
