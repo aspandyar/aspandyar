@@ -1,5 +1,4 @@
 - 👋 Hi, I’m Stephen Novel
-- 👀 I’m interested in Developing, and DevOps
-- 🌱 I’m currently learning Golang
-- 💞️ I’m looking to collaborate on ...
+- 👀 I’m interested in DevOps
+- 🌱 I’m currently learning ML
 - 📫 TG: @aspandyar
