@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=3B82F6&center=true&vCenter=true&width=435&lines=Hey+there!+I'm+Aspandyar+Sharip+👋;Full-Stack+Developer+💻;Welcome+to+my+GitHub!+🚀" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=3B82F6&center=true&vCenter=true&width=435&lines=Hello+World!+I'm+aspandyar+👋;Full-Stack+Developer+💻;Welcome+to+my+GitHub!+🚀" alt="Typing SVG" />
 </div>
 
 ---
@@ -50,20 +50,6 @@ I'm a **Full-Stack Developer** with 4 years of experience, passionate about soft
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
-
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-  
-![Aspandyar's GitHub stats](https://github-readme-stats.vercel.app/api?username=aspandyar&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3B82F6&icon_color=3B82F6)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=aspandyar&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3B82F6)
-
-![GitHub Streak](https://streak-stats.demolab.com/?user=aspandyar&theme=tokyonight&hide_border=true&background=0D1117&border=3B82F6&ring=3B82F6&fire=3B82F6&currStreakLabel=3B82F6)
-
-</div>
 
 ---
 
