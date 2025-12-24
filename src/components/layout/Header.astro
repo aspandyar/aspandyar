@@ -8,11 +8,12 @@ import { getCollection } from "astro:content";
 const [staticData] = await getCollection("staticData");
 const { github, githubIconName, linkedin, linkedinIconName } = staticData.data;
 
+const baseUrl = import.meta.env.BASE_URL;
 const currentPath = Astro.url.pathname;
-const routes = ["/", "/portfolio", "/about-me"];
+const routes = [baseUrl, `${baseUrl}/portfolio`, `${baseUrl}/about-me`];
 
 // Check if the current route is in the list of routes
-const isActiveRoute = routes.includes(currentPath);
+const isActiveRoute = routes.includes(currentPath) || currentPath === baseUrl.slice(0, -1);
 
 const navItems = isActiveRoute
   // ? ["home", "experience", "projects", "about", "blog"]
@@ -20,7 +21,6 @@ const navItems = isActiveRoute
   ? ["home", "experience", "projects", "about"]
   : ["home", "about"]; // Change the items
 
-const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <header
@@ -31,7 +31,7 @@ const baseUrl = import.meta.env.BASE_URL;
   <div
     class="relative mx-auto flex max-w-7xl flex-row items-center justify-between max-xl:px-6"
   >
-    <a href="/" aria-label="Go to home">
+    <a href={baseUrl} aria-label="Go to home">
       <img
         src={`${baseUrl}/asp.png`}
         alt="Logo"

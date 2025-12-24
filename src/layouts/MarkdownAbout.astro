@@ -47,11 +47,12 @@ const baseUrl = import.meta.env.BASE_URL;
               </div>
               <div class="relative z-20 flex w-full rounded-full bg-mint-900">
                 <div
-                  class={`w-full aspect-square rounded-full bg-[url(${baseUrl}/images/profile_photo.jpeg)] bg-center bg-cover`}
+                  class="w-full aspect-square rounded-full bg-center bg-cover"
+                  style={`background-image: url(${baseUrl}/images/profile_photo.jpeg)`}
                   aria-label="Photo of Aspandyar Sharip for the blog"
                 >
                   <a
-                    href="/about-me"
+                    href={`${baseUrl}/about-me`}
                     class="flex h-full w-full"
                     aria-label="View about me page"></a>
                 </div>

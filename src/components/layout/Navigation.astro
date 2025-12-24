@@ -9,16 +9,18 @@ const { items = [] }: { items: (keyof typeof menu)[] } = Astro.props as {
   items: (keyof typeof menu)[];
 };
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const menu = {
-  about: { name: "About Me", path: "/about-me" },
+  about: { name: "About Me", path: `${baseUrl}/about-me` },
   blog: {
     name: "Blog",
-    path: "/blog/",
-    dropdown: [{ name: "All Posts", path: "/blog/posts/" }],
+    path: `${baseUrl}/blog/`,
+    dropdown: [{ name: "All Posts", path: `${baseUrl}/blog/posts/` }],
   },
-  home: { name: "Home", path: "/#home" },
-  experience: { name: "Experience", path: "/#experience" },
-  projects: { name: "Projects", path: "/#projects" },
+  home: { name: "Home", path: `${baseUrl}/#home` },
+  experience: { name: "Experience", path: `${baseUrl}/#experience` },
+  projects: { name: "Projects", path: `${baseUrl}/#projects` },
 };
 
 // Common base classes
@@ -36,7 +38,8 @@ const baseClasses = {
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const isHome = window.location.pathname === "/";
+    const baseUrl = import.meta.env.BASE_URL;
+    const isHome = window.location.pathname === baseUrl || window.location.pathname === `${baseUrl}/`;
 
     // Classes for link states
     const linkClasses = {
@@ -69,7 +72,13 @@ const baseClasses = {
 
       document.querySelectorAll("nav a").forEach((link) => {
         const path = link.getAttribute("data-path");
-        toggleLinkClasses(link, path === currentPath || path === currentHash);
+        // Normalize paths for comparison (remove trailing slashes, handle base URL)
+        const normalizedPath = path?.replace(/\/$/, "") || "";
+        const normalizedCurrentPath = currentPath.replace(/\/$/, "");
+        const pathMatches = normalizedPath === normalizedCurrentPath || 
+                           normalizedPath === currentHash ||
+                           (normalizedPath.endsWith(currentHash) && currentHash);
+        toggleLinkClasses(link, pathMatches);
       });
     }
 
@@ -92,7 +101,8 @@ const baseClasses = {
             if (sectionId) {
               navLinks.forEach((link) => {
                 const path = link.getAttribute("data-path");
-                toggleLinkClasses(link, path === `/#${sectionId}`);
+                const expectedPath = `${baseUrl}/#${sectionId}`;
+                toggleLinkClasses(link, path === expectedPath);
               });
             }
           }

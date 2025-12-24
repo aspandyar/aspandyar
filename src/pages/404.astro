@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
+
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout
@@ -30,7 +32,7 @@ import { Icon } from "astro-icon/components";
         </p>
 
         <a
-            href="/"
+            href={baseUrl}
             class="inline-flex items-center gap-3 px-8 py-4 text-white rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl
              bg-mint-500 hover:bg-mint-600 focus:outline-none focus:ring-4 focus:ring-mint-500/50 dark:bg-riptide-500 dark:hover:bg-riptide-600 dark:focus:ring-riptide-500/50"
         >
