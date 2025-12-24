@@ -10,6 +10,8 @@ import Tools from "../components/portfolio/Tools.astro";
 const { frontmatter } = Astro.props;
 
 const baseUrl = import.meta.env.BASE_URL;
+const profileImagePath = `/images/profile_photo.jpeg`;
+const profileImageUrl = profileImagePath.startsWith('/') ? `${baseUrl}/${profileImagePath.slice(1)}` : `${baseUrl}/${profileImagePath}`;
 ---
 
 <script>
@@ -48,7 +50,7 @@ const baseUrl = import.meta.env.BASE_URL;
               <div class="relative z-20 flex w-full rounded-full bg-mint-900">
                 <div
                   class="w-full aspect-square rounded-full bg-center bg-cover"
-                  style={`background-image: url(${baseUrl}/images/profile_photo.jpeg)`}
+                  style={`background-image: url(${profileImageUrl})`}
                   aria-label="Photo of Aspandyar Sharip for the blog"
                 >
                   <a
