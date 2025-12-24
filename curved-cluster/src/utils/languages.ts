@@ -5,22 +5,25 @@ export interface Language {
 }
 
 export const languages: Record<string, Language> = {
-  angular: {
-    name: "Angular",
-    iconName: "angular",
+  // Runtime & Languages
+  node: {
+    name: "Node.js",
+    iconName: "node",
   },
-  astro: {
-    name: "Astro",
-    iconName: "astro",
+  python: {
+    name: "Python",
+    iconName: "python",
   },
-  bootstrap: {
-    name: "Bootstrap",
-    iconName: "bootstrap",
+  golang: {
+    name: "Golang",
+    iconName: "golang", // ❌ NEED TO ADD
   },
-  cloudflare: {
-    name: "Cloudflare",
-    iconName: "cloudflare",
+  java: {
+    name: "Java",
+    iconName: "java", // ❌ NEED TO ADD
   },
+
+  // Frontend Languages
   html: {
     name: "HTML 5",
     iconName: "html",
@@ -29,26 +32,149 @@ export const languages: Record<string, Language> = {
     name: "JavaScript",
     iconName: "javascript",
   },
-  mongo: {
-    name: "MongoDb",
-    iconName: "mongo",
+  ts: {
+    name: "TypeScript",
+    iconName: "typescript",
   },
-  mysql: {
-    name: "MySQL",
-    className: "bg-[#f6ece1]!",
-    iconName: "mysql",
+  react: {
+    name: "React",
+    iconName: "react", // ❌ NEED TO ADD
   },
-  wordpress: {
-    name: "Wordpress",
-    iconName: "wordpress",
-  },
-  node: {
-    name: "Node.js",
-    iconName: "node",
+
+  // Styling
+  css: {
+    name: "CSS",
+    iconName: "css",
   },
   tailwind: {
     name: "Tailwind CSS",
     iconName: "tailwind",
+  },
+  bootstrap: {
+    name: "Bootstrap",
+    iconName: "bootstrap",
+  },
+
+  // Databases
+  postgres: {
+    name: "PostgreSQL",
+    iconName: "postgres", // ❌ NEED TO ADD
+  },
+  redis: {
+    name: "Redis",
+    iconName: "redis", // ❌ NEED TO ADD
+  },
+  mongo: {
+    name: "MongoDB",
+    iconName: "mongo",
+  },
+  mysql: {
+    name: "MySQL",
+    iconName: "mysql",
+  },
+
+  // Version Control & Documentation
+  git: {
+    name: "Git",
+    iconName: "git",
+  },
+  markdown: {
+    name: "Markdown",
+    iconName: "markdown",
+  },
+  linux: {
+    name: "Linux",
+    iconName: "linux", // ❌ NEED TO ADD
+  },
+  bash: {
+    name: "Bash",
+    iconName: "gnubash", // ❌ NEED TO ADD
+  },
+
+  // Backend Frameworks
+  fastapi: {
+    name: "FastAPI",
+    iconName: "fastapi", // ❌ NEED TO ADD
+  },
+  express: {
+    name: "Express.js",
+    iconName: "express", // ❌ NEED TO ADD
+  },
+  nestjs: {
+    name: "NestJS",
+    iconName: "nestjs", // ❌ NEED TO ADD
+  },
+  django: {
+    name: "Django",
+    iconName: "django", // ❌ NEED TO ADD
+  },
+  flask: {
+    name: "Flask",
+    iconName: "flask", // ❌ NEED TO ADD
+  },
+  spring: {
+    name: "Spring",
+    iconName: "spring", // ❌ NEED TO ADD
+  },
+  gin: {
+    name: "Gin",
+    iconName: "gin", // ❌ NEED TO ADD
+  },
+  // "gorilla/mux": {
+  //   name: "Gorilla Mux",
+  //   iconName: "gorilla-mux", // ❌ NEED TO ADD
+  // },
+  // echo: {
+  //   name: "Echo",
+  //   iconName: "echo", // ❌ NEED TO ADD
+  // },
+
+  // DevOps & Infrastructure
+  docker: {
+    name: "Docker",
+    iconName: "docker", // ❌ NEED TO ADD
+  },
+  kubernetes: {
+    name: "Kubernetes",
+    iconName: "kubernetes", // ❌ NEED TO ADD
+  },
+  aws: {
+    name: "AWS",
+    iconName: "aws", // ❌ NEED TO ADD
+  },
+  grafana: {
+    name: "Grafana",
+    iconName: "grafana", // ❌ NEED TO ADD
+  },
+  prometheus: {
+    name: "Prometheus",
+    iconName: "prometheus", // ❌ NEED TO ADD
+  },
+  nginx: {
+    name: "Nginx",
+    iconName: "nginx", // ❌ NEED TO ADD
+  },
+  heroku: {
+    name: "Heroku",
+    iconName: "heroku", // ❌ NEED TO ADD
+  },
+
+  // Existing tools
+  angular: {
+    name: "Angular",
+    iconName: "angular",
+  },
+  astro: {
+    name: "Astro",
+    iconName: "astro",
+  },
+  cloudflare: {
+    name: "Cloudflare",
+    iconName: "cloudflare",
+  },
+  wordpress: {
+    name: "Wordpress",
+    iconName: "wordpress",
   },
   figma: {
     name: "Figma",
@@ -58,10 +184,6 @@ export const languages: Record<string, Language> = {
     name: "Firebase",
     iconName: "firebase",
   },
-  markdown: {
-    name: "Markdown",
-    iconName: "markdown",
-  },
   php: {
     name: "PHP",
     iconName: "php",
@@ -69,18 +191,6 @@ export const languages: Record<string, Language> = {
   sass: {
     name: "Sass",
     iconName: "sass",
-  },
-  ts: {
-    name: "TypeScript",
-    iconName: "typescript",
-  },
-  git: {
-    name: "Git",
-    iconName: "git",
-  },
-  css: {
-    name: "CSS",
-    iconName: "css",
   },
   vercel: {
     name: "Vercel",
@@ -106,12 +216,8 @@ export const languages: Record<string, Language> = {
     name: "DeepSeek",
     iconName: "deepseek",
   },
-  python: {
-    name: "Python",
-    iconName: "python",
-  },
 };
 
 export const getLanguage = (lang: string): Language => {
   return languages[lang] || languages.html;
-}; 
+};
