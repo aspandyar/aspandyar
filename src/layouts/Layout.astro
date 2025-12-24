@@ -23,7 +23,7 @@ const SEO = {
 };
 
 const ogImageUrl = ogimage.url.startsWith('/') ? `${baseUrl}/${ogimage.url.slice(1)}` : ogimage.url;
-const twitterimage = `${siteUrl}${baseUrl}${ogimage.url.startsWith('/') ? ogimage.url.slice(1) : ogimage.url}`;
+const twitterimage = `${siteUrl}${baseUrl}/${ogimage.url.startsWith('/') ? ogimage.url.slice(1) : ogimage.url}`;
 ---
 
 <html
@@ -70,7 +70,7 @@ const twitterimage = `${siteUrl}${baseUrl}${ogimage.url.startsWith('/') ? ogimag
     <meta name="theme-color" content="#0E0E11"/>
 
     <!-- Sitemap -->
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="sitemap" href={`${baseUrl}/sitemap-index.xml`} />
     
   </head>
   <body class="overflow-x-hidden">

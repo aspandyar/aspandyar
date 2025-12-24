@@ -11,6 +11,8 @@ export interface Props {
 
 const { excludeLatest = false, currentPostUrl = "", all = false } = Astro.props;
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const allPosts = await Astro.glob("../../pages/blog/posts/*.md");
 // Sort by date in descending order (newest first)
 allPosts.sort((a, b) => {
@@ -71,7 +73,7 @@ if (!all) {
     !all && (
       <div id="morePosts" class="w-full flex justify-center text-center my-12">
         <a
-          href="/blog/posts/"
+          href={`${baseUrl}/blog/posts/`}
           class="font-bold cursor-pointer text-mint-400 dark:text-mint-100 hover:text-mint-500 dark:hover:text-mint-300 transition-all"
         >
           View all posts...
