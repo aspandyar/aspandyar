@@ -17,7 +17,7 @@ const tags = [...new Set(latestPost.frontmatter.tags ?? [])];
 const languages = [...new Set(latestPost.frontmatter.languages ?? [])];
 const baseUrl = import.meta.env.BASE_URL;
 const rawImage = latestPost.frontmatter.image.url;
-const image = rawImage.startsWith('/') ? `${baseUrl}${rawImage.slice(1)}` : rawImage;
+const image = rawImage.startsWith('/') ? `${baseUrl}/${rawImage.slice(1)}` : rawImage;
 const imageAlt =
   latestPost.frontmatter.image.alt || latestPost.frontmatter.title;
 ---

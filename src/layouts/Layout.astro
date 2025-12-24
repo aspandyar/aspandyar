@@ -22,7 +22,7 @@ const SEO = {
   twitter: "@efeeledev",
 };
 
-const ogImageUrl = ogimage.url.startsWith('/') ? `${baseUrl}${ogimage.url.slice(1)}` : ogimage.url;
+const ogImageUrl = ogimage.url.startsWith('/') ? `${baseUrl}/${ogimage.url.slice(1)}` : ogimage.url;
 const twitterimage = `${siteUrl}${baseUrl}${ogimage.url.startsWith('/') ? ogimage.url.slice(1) : ogimage.url}`;
 ---
 
@@ -35,14 +35,14 @@ const twitterimage = `${siteUrl}${baseUrl}${ogimage.url.startsWith('/') ? ogimag
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
     <!-- Favicon for different platforms -->
-    <link rel="icon" href={`${baseUrl}favicon-32x32.png`} sizes="32x32" />
-    <link rel="icon" href={`${baseUrl}favicon-16x16.png`} sizes="16x16" />
-    <link rel="apple-touch-icon" href={`${baseUrl}apple-touch-icon.png`} />
-    <link rel="icon" href={`${baseUrl}android-chrome-192x192.png`} sizes="192x192" />
-    <link rel="icon" href={`${baseUrl}android-chrome-512x512.png`} sizes="512x512" />
+    <link rel="icon" href={`${baseUrl}/favicon-32x32.png`} sizes="32x32" />
+    <link rel="icon" href={`${baseUrl}/favicon-16x16.png`} sizes="16x16" />
+    <link rel="apple-touch-icon" href={`${baseUrl}/apple-touch-icon.png`} />
+    <link rel="icon" href={`${baseUrl}/android-chrome-192x192.png`} sizes="192x192" />
+    <link rel="icon" href={`${baseUrl}/android-chrome-512x512.png`} sizes="512x512" />
 
     <!-- Web manifest -->
-    <link rel="manifest" href={`${baseUrl}site.webmanifest`} />
+    <link rel="manifest" href={`${baseUrl}/site.webmanifest`} />
 
     <meta name="description" content={description} />
     <meta name="author" content={SEO.author} />
@@ -51,7 +51,7 @@ const twitterimage = `${siteUrl}${baseUrl}${ogimage.url.startsWith('/') ? ogimag
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={`${siteUrl}${baseUrl}${ogimage.url.startsWith('/') ? ogimage.url.slice(1) : ogimage.url}`} />
+    <meta property="og:image" content={`${siteUrl}${baseUrl}/${ogimage.url.startsWith('/') ? ogimage.url.slice(1) : ogimage.url}`} />
     <meta property="og:image:alt" content={ogimage.alt} />
     <meta property="og:url" content={SEO.url} />
     <meta property="og:type" content="website" />
