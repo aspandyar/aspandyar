@@ -13,6 +13,8 @@ const tweetText = encodeURIComponent(
   `"${frontmatter.title}" - by ${frontmatter.author} | EFEELE`
 );
 import Heading from "../components/ui/Heading.astro";
+
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <script>
@@ -71,7 +73,7 @@ import Heading from "../components/ui/Heading.astro";
   >
     <div class="w-64 max-xl:hidden"></div>
     <article
-      class="flex flex-col gap-8 max-w-3xl max-md:w-full pb-10 pt-8 mt-8 px-14 max-md:px-10 max-sm:px-4 dark:bg-transparent bg-white dark:border-0 border border-neutral-100 rounded-2xl"
+      class="flex flex-col gap-8 max-w-3xl max-md:w-full pb-10 pt-8 mt-8 px-14 max-md:px-10 max-sm:px-4 dark:bg-transparent bg-white dark:border-0 rounded-2xl"
     >
       <header class="flex flex-col gap-4" id="start">
         <div class="flex gap-2 flex-wrap">
@@ -95,7 +97,7 @@ import Heading from "../components/ui/Heading.astro";
             <div
               aria-label="Photo of Fernando Aldair López Ponce (EFEELE) for the blog"
               class="size-10 bg-cover bg-center rounded-full drop-shadow-lg"
-              style="background-image: url(/images/efeeleprofile.webp);"
+              style={`background-image: url(${baseUrl}images/efeeleprofile.webp);`}
             >
             </div>
             <a
@@ -114,7 +116,7 @@ import Heading from "../components/ui/Heading.astro";
           frontmatter.image?.url && (
             <img
               class="w-full rounded-xl"
-              src={frontmatter.image.url}
+              src={frontmatter.image.url.startsWith('/') ? `${baseUrl}${frontmatter.image.url.slice(1)}` : frontmatter.image.url}
               alt={frontmatter.image.alt || "Article image"}
             />
           )

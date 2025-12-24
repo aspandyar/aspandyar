@@ -19,6 +19,8 @@ const navItems = isActiveRoute
   // : ["home", "blog", "about"]; // Change the items
   ? ["home", "experience", "projects", "about"]
   : ["home", "about"]; // Change the items
+
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <header
@@ -31,7 +33,7 @@ const navItems = isActiveRoute
   >
     <a href="/" aria-label="Go to home">
       <img
-        src="/asp.png"
+        src={`${baseUrl}asp.png`}
         alt="Logo"
         class="h-12 cursor-pointer transition-all hover:opacity-80"
         aria-hidden="true"

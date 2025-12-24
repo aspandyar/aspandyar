@@ -8,6 +8,8 @@ import NavArticle from "../components/layout/NavArticle.astro";
 import Contact from "../components/portfolio/Contact.astro";
 import Tools from "../components/portfolio/Tools.astro";
 const { frontmatter } = Astro.props;
+
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <script>
@@ -29,7 +31,7 @@ const { frontmatter } = Astro.props;
     <div class="w-64 max-xl:hidden"></div>
 
     <article
-      class="flex flex-col gap-8 max-w-3xl max-md:w-full pb-10 pt-8 mt-8 max-sm:mt-0 px-14 max-md:px-10 max-sm:px-6 dark:bg-transparent bg-white dark:border-0 border border-neutral-100 rounded-2xl"
+      class="flex flex-col gap-8 max-w-3xl max-md:w-full pb-10 pt-8 mt-8 max-sm:mt-0 px-14 max-md:px-10 max-sm:px-6 dark:bg-transparent bg-white dark:border-0 rounded-2xl"
     >
       <div class="w-full h-auto mb-4 mx-auto" id="#">
         <div
@@ -45,7 +47,7 @@ const { frontmatter } = Astro.props;
               </div>
               <div class="relative z-20 flex w-full rounded-full bg-mint-900">
                 <div
-                  class="w-full aspect-square rounded-full bg-[url(/images/profile_photo.jpeg)] bg-center bg-cover"
+                  class={`w-full aspect-square rounded-full bg-[url(${baseUrl}images/profile_photo.jpeg)] bg-center bg-cover`}
                   aria-label="Photo of Aspandyar Sharip for the blog"
                 >
                   <a
