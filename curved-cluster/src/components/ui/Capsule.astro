@@ -15,14 +15,17 @@ const baseClasses = {
     "flex items-center w-fit",
     "pl-2 pr-2 py-0.5 gap-1",
     "text-sm font-semibold leading-3",
-    "bg-white shadow rounded-full",
-    "transition-all duration-300 ease-in-out hover:bg-zinc-800 hover:text-white",
+    "bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm shadow-sm rounded-full",
+    "border border-zinc-200 dark:border-zinc-700",
+    "transition-all duration-300 ease-in-out",
+    "hover:bg-white dark:hover:bg-zinc-700 hover:shadow-md",
+    "dark:text-zinc-200 text-blacktext",
     "max-sm:pl-1 max-sm:pr-1.5 max-sm:text-xs max-sm:gap-0.5",
   ].join(" "),
   iconContainer: [
     "flex items-center justify-center",
     "aspect-square",
-    "bg-black rounded-full p-1",
+    "bg-transparent rounded-full p-1",
   ].join(" "),
 };
 
@@ -63,7 +66,7 @@ const getIconContainerClasses = () => {
           role="img"
           aria-label={`${selectedLanguage.name} icon`}
         >
-          <Icon class="w-full!" name={selectedLanguage.iconName} />
+          <Icon class="w-full h-full" name={selectedLanguage.iconName} />
         </div>
         {selectedLanguage.name}
       </span>
@@ -79,7 +82,7 @@ const getIconContainerClasses = () => {
         role="img"
         aria-label={`${selectedLanguage.name} icon`}
       >
-        <Icon class="w-full!" name={selectedLanguage.iconName} />
+        <Icon class="w-full h-full" name={selectedLanguage.iconName} />
       </div>
       {selectedLanguage.name}
     </span>

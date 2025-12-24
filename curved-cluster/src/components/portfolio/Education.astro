@@ -1,0 +1,52 @@
+---
+import EducationItem from "./EducationItem.astro";
+import Heading from "../ui/Heading.astro";
+import { Icon } from "astro-icon/components";
+
+const EDUCATION = [
+  {
+    date: "Aug. 2022 – Jun. 2025",
+    degree: "Bachelor in Computer Science",
+    university: "Astana IT University",
+    gpa: "3.5",
+    location: "Astana, Kazakhstan"
+  },
+  {
+    date: "Aug. 2025 - Jun. 2027",
+    degree: "Master Degree in Computer Science and Engineering",
+    university: "Astana IT University",
+    location: "Astana, Kazakhstan"
+  },
+];
+---
+
+<section class="py-8 px-8 max-md:py-4 mb-4 scroll-m-16" id="education">
+  <div class="flex flex-col pt-8 max-w-4xl mx-auto">
+    <div class="flex gap-4 items-center justify-center">
+      <Icon class="text-3xl dark:text-white text-blacktext" name="info" />
+      <Heading text="Education" level={2} />
+    </div>
+
+    <div class="relative max-md:mt-0 mt-8" aria-label="Educational background">
+      <ol class="relative mt-10">
+        {
+          EDUCATION.map((education, index) => (
+            <li>
+              <article
+                role="article"
+                aria-labelledby={`education-title-${index}`}
+              >
+                <div
+                  class="flex flex-col gap-2 text-zinc-00 dark:text-zinc-300 md:col-span-3"
+                  aria-describedby={`education-title-${index}`}
+                >
+                  <EducationItem {...education} />
+                </div>
+              </article>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </div>
+</section>
