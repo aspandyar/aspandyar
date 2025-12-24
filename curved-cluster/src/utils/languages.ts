@@ -16,11 +16,11 @@ export const languages: Record<string, Language> = {
   },
   golang: {
     name: "Golang",
-    iconName: "golang", // ❌ NEED TO ADD
+    iconName: "golang", 
   },
   java: {
     name: "Java",
-    iconName: "java", // ❌ NEED TO ADD
+    iconName: "java", 
   },
 
   // Frontend Languages
@@ -38,7 +38,7 @@ export const languages: Record<string, Language> = {
   },
   react: {
     name: "React",
-    iconName: "react", // ❌ NEED TO ADD
+    iconName: "react", 
   },
 
   // Styling
@@ -58,11 +58,11 @@ export const languages: Record<string, Language> = {
   // Databases
   postgres: {
     name: "PostgreSQL",
-    iconName: "postgres", // ❌ NEED TO ADD
+    iconName: "postgres", 
   },
   redis: {
     name: "Redis",
-    iconName: "redis", // ❌ NEED TO ADD
+    iconName: "redis", 
   },
   mongo: {
     name: "MongoDB",
@@ -84,79 +84,79 @@ export const languages: Record<string, Language> = {
   },
   linux: {
     name: "Linux",
-    iconName: "linux", // ❌ NEED TO ADD
+    iconName: "linux", 
   },
   bash: {
     name: "Bash",
-    iconName: "gnubash", // ❌ NEED TO ADD
+    iconName: "gnubash", 
   },
 
   // Backend Frameworks
   fastapi: {
     name: "FastAPI",
-    iconName: "fastapi", // ❌ NEED TO ADD
+    iconName: "fastapi", 
   },
   express: {
     name: "Express.js",
-    iconName: "express", // ❌ NEED TO ADD
+    iconName: "express",  
   },
-  nestjs: {
-    name: "NestJS",
-    iconName: "nestjs", // ❌ NEED TO ADD
-  },
+  // nestjs: {
+  //   name: "NestJS",
+  //   iconName: "nestjs", 
+  // },
   django: {
     name: "Django",
-    iconName: "django", // ❌ NEED TO ADD
+    iconName: "django", 
   },
   flask: {
     name: "Flask",
-    iconName: "flask", // ❌ NEED TO ADD
+    iconName: "flask", 
   },
   spring: {
     name: "Spring",
-    iconName: "spring", // ❌ NEED TO ADD
+    iconName: "spring", 
   },
   gin: {
     name: "Gin",
-    iconName: "gin", // ❌ NEED TO ADD
+    iconName: "gin", 
   },
   // "gorilla/mux": {
   //   name: "Gorilla Mux",
-  //   iconName: "gorilla-mux", // ❌ NEED TO ADD
+  //   iconName: "gorilla-mux", 
   // },
   // echo: {
   //   name: "Echo",
-  //   iconName: "echo", // ❌ NEED TO ADD
+  //   iconName: "echo", 
   // },
 
   // DevOps & Infrastructure
   docker: {
     name: "Docker",
-    iconName: "docker", // ❌ NEED TO ADD
+    iconName: "docker", 
   },
   kubernetes: {
     name: "Kubernetes",
-    iconName: "kubernetes", // ❌ NEED TO ADD
+    iconName: "kubernetes", 
   },
   aws: {
     name: "AWS",
-    iconName: "aws", // ❌ NEED TO ADD
+    iconName: "aws", 
   },
   grafana: {
     name: "Grafana",
-    iconName: "grafana", // ❌ NEED TO ADD
+    iconName: "grafana", 
   },
   prometheus: {
     name: "Prometheus",
-    iconName: "prometheus", // ❌ NEED TO ADD
+    iconName: "prometheus", 
   },
   nginx: {
     name: "Nginx",
-    iconName: "nginx", // ❌ NEED TO ADD
+    iconName: "nginx", 
   },
   heroku: {
     name: "Heroku",
-    iconName: "heroku", // ❌ NEED TO ADD
+    iconName: "heroku", 
   },
 
   // Existing tools
