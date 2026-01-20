@@ -216,6 +216,14 @@ export const languages: Record<string, Language> = {
     name: "DeepSeek",
     iconName: "deepseek",
   },
+  vite: {
+    name: "Vite",
+    iconName: "vite",
+  },
+  prisma: {
+    name: "Prisma",
+    iconName: "prisma",
+  },
 };
 
 export const getLanguage = (lang: string): Language => {
