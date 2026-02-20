@@ -47,6 +47,10 @@ The app supports **Word Count**, **Remove Duplicates**, **Clean Trash** (empty l
 - **Pino** – Logging
 - **Docker Compose** – PostgreSQL
 
+## 🌐 Demo
+
+👉 [View live demo](http://aspandyar.me/TextOps/)
+
 ## 🎯 Objective
 
 TextOps provides a single dashboard to run common text operations on uploaded files, track job progress in real time, and view clear result summaries (word count, line count, character counts). It combines a simple UI with a reliable backend and real-time feedback for a smooth text-processing workflow.

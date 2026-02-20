@@ -126,7 +126,14 @@ const portfolioImages = [
       class="col-start-2 row-start-2 flex flex-col gap-3 rounded-2xl border border-blue-50 bg-linear-to-r from-riptide-200 to-mint-200 p-8 dark:border-zinc-800 dark:border-2 dark:bg-zinc-800 dark:bg-gradient-radial dark:from-riptide-500 dark:to-mint-500 max-md:gap-0 max-xl:p-5 max-md:p-4 max-lg:gap-1 md:col-start-4"
     >
       <div class="flex flex-col-reverse items-start gap-4 max-md:gap-2">
-        <Heading text="Beyond the Code" level={2} />
+        <div class="flex items-center gap-4 max-md:gap-2">
+          <Icon
+            class="text-3xl dark:text-white text-mint-500 max-md:text-2xl max-sm:text-xl"
+            name="heart"
+            aria-hidden="true"
+          />
+          <Heading text="Beyond the Code" level={2} />
+        </div>
       </div>
 
       <div class="overflow-y-auto">
