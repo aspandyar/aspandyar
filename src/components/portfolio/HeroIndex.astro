@@ -16,11 +16,14 @@ const {
   email,
   emailIconName,
   github,
-  portfolioImage,
   contactSectionButtonText,
 } = staticData.data;
 
 const baseUrl = import.meta.env.BASE_URL;
+const portfolioImages = [
+  { src: "/images/projects/finance-hub-1.jpg", alt: "Finance Hub dashboard – personal finance management app.", href: `${baseUrl}/portfolio/projects/finance-hub` },
+  { src: "/images/projects/textops.png", alt: "TextOps – productivity and text automation tool.", href: `${baseUrl}/#projects` },
+];
 ---
 
 <section
@@ -34,17 +37,31 @@ const baseUrl = import.meta.env.BASE_URL;
     <div
       class="group relative z-0 flex h-full items-center justify-center gap-8 overflow-hidden rounded-2xl bg-linear-to-tr from-riptide-100 to-white p-4 transition-all hover:shadow-[0_10px_50px_rgba(59,130,246,0.2)] dark:bg-linear-to-r dark:from-mint-950 dark:to-zinc-950 dark:overflow-hidden max-md:w-full max-md:gap-3 max-lg:gap-2 max-sm:flex-col dark:before:bg-[radial-gradient(circle,rgba(59,130,246)_0,rgba(23,37,84)_100%)] before:bg-[radial-gradient(circle,rgba(147,197,253)_0,rgba(191,219,254)_100%)] before:absolute before:left-65 before:top-10 before:h-[40%] before:aspect-square before:rounded-full before:blur-3xl before:opacity-80 before:-z-10 before:transition hover:before:animate-pulse"
     >
-      <div class="aspect-square h-4/5 max-md:size-32">
+      <div class="relative aspect-[4/5] h-4/5 max-md:size-36">
+        <!-- Decorative transparent layers at different angles -->
         <div
-          class="group-hover:scale-105 relative z-10 flex w-full cursor-pointer items-center overflow-hidden rounded-full p-[2px] transition-all duration-500"
+          class="absolute inset-0 z-0 rounded-2xl border border-riptide-300/40 dark:border-mint-400/30 bg-riptide-100/50 dark:bg-mint-500/10 -rotate-6 transition-transform duration-500 group-hover:rotate-[-4deg]"
+          style="transform-origin: center center;"
+          aria-hidden="true"
+        />
+        <div
+          class="absolute inset-0 z-[1] rounded-2xl border border-mint-400/30 dark:border-riptide-400/20 bg-white/30 dark:bg-mint-950/40 rotate-3 -translate-x-1 translate-y-1 transition-transform duration-500 group-hover:rotate-[5deg] group-hover:translate-x-0 group-hover:translate-y-0"
+          style="transform-origin: center center;"
+          aria-hidden="true"
+        />
+        <!-- One layer overlapping at corner -->
+        <div
+          class="absolute -right-2 -top-2 z-[2] h-[70%] w-[70%] rounded-2xl border border-riptide-200/50 dark:border-mint-500/25 bg-riptide-50/60 dark:bg-mint-600/15 rotate-12 transition-transform duration-500 group-hover:rotate-[14deg]"
+          style="transform-origin: bottom left;"
+          aria-hidden="true"
+        />
+        <!-- Main profile image: rectangle so nothing important is cut -->
+        <div
+          class="group-hover:scale-[1.02] relative z-10 flex w-full cursor-pointer items-center overflow-hidden rounded-2xl border-2 border-riptide-200/60 dark:border-mint-500/40 p-[2px] shadow-lg transition-all duration-500"
         >
-          <div
-            class="absolute inset-0 h-full w-full rounded-fullfrom-transparent to-riptide-500 dark:from-transparent f dark:to-mint-300 animate-rotate-border bg-conic/[from_var(--border-angle)]"
-          >
-          </div>
-          <div class="relative z-20 flex w-full rounded-full bg-mint-900">
+          <div class="relative z-20 flex w-full rounded-xl bg-mint-900 overflow-hidden">
             <div
-              class="w-full aspect-square rounded-full bg-center bg-cover"
+              class="w-full aspect-[4/5] rounded-xl bg-center bg-cover"
               style={`background-image: url(${profileImage.startsWith('/') ? `${baseUrl}/${profileImage.slice(1)}` : `${baseUrl}/${profileImage}`})`}
               aria-label={profileAlt}
             >
@@ -186,7 +203,7 @@ const baseUrl = import.meta.env.BASE_URL;
           <Heading text="Projects" level={3} />
         </div>
         <p
-          class="z-2 my-6 text-lg font-semibold leading-6 dark:text-gray-200 text-blacktext max-xl:text-base max-w-[90%] max-md:max-w-[85%]"
+          class="z-2 my-4 text-lg font-semibold leading-6 dark:text-gray-200 text-blacktext max-xl:text-base max-w-[90%] max-md:max-w-[85%]"
         >
           I enjoy <span
             class="bg-linear-to-r from-riptide-500 to-mint-500 bg-clip-text font-black text-transparent dark:from-riptide-300 dark:to-mint-200"
@@ -201,14 +218,65 @@ const baseUrl = import.meta.env.BASE_URL;
             >Take a look!</span
           >
         </p>
-        <img
-          class="relative left-0 z-0 mt-40 w-full object-cover transition-all ease-in-out duration-500 group-hover:rotate-2 group-hover:scale-185 max-xl:mt-28 max-lg:mt-10 max-sm:mt-0 max-md:scale-100 max-sm:scale-125 scale-180 max-md:group-hover:scale-105 before:bg-[radial-gradient(circle,rgba(59,130,246)_0,rgba(23,37,84)_100%)] before:absolute before:left-30 before:-bottom-0 before:h-[80%] before:aspect-square before:rounded-full before:blur-3xl before:opacity-80 before:-z-10 before:transition"
-          src={portfolioImage.startsWith('/') ? `${baseUrl}/${portfolioImage.slice(1)}` : `${baseUrl}/${portfolioImage}`}
-          alt="View of two website interfaces with modern and dark design. The first screen shows the title 'Behind the Code' with a rocket and dark background, explaining the origin of a community software project. The second screen presents a platform for finding speakers, with an attractive design, expert photos, and a prominent search button."
-          loading="lazy"
-          width="480"
-          height="320"
-        />
+        <!-- Project previews: fill available space, full rectangles + transparent angled layers -->
+        <div class="relative z-0 mt-4 flex min-h-0 flex-1 flex-col gap-4 sm:flex-row sm:gap-6">
+          <!-- Decorative transparent layers behind the cards -->
+          <div
+            class="absolute left-0 top-0 z-0 h-[90%] w-[48%] rounded-2xl border border-riptide-300/35 dark:border-mint-400/25 bg-riptide-100/40 dark:bg-mint-500/10 -rotate-3 max-sm:w-[92%] max-sm:left-2"
+            aria-hidden="true"
+          />
+          <div
+            class="absolute right-0 top-0 z-0 h-[92%] w-[48%] rounded-2xl border border-mint-400/30 dark:border-riptide-400/20 bg-white/25 dark:bg-mint-950/30 rotate-2 translate-x-1 max-sm:w-[92%] max-sm:right-2 max-sm:left-auto"
+            aria-hidden="true"
+          />
+          <div
+            class="absolute -right-3 top-2 z-[1] h-[80%] w-[44%] rounded-2xl border border-riptide-200/45 dark:border-mint-500/20 bg-riptide-50/50 dark:bg-mint-600/10 rotate-6 max-sm:hidden"
+            aria-hidden="true"
+          />
+          <a
+            href={portfolioImages[0].href}
+            class="group/card relative z-10 flex min-h-0 min-w-0 flex-[1.1] flex-col overflow-hidden rounded-2xl border-2 border-zinc-200/60 bg-zinc-100/80 dark:bg-zinc-800/80 shadow-lg transition-all duration-300 ease-out hover:scale-[1.02] hover:border-mint-400/40 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-mint-400/50 focus:ring-offset-2 dark:border-zinc-700/60 dark:hover:border-mint-500/40 dark:focus:ring-offset-zinc-900"
+            aria-label={portfolioImages[0].alt}
+          >
+            <div class="flex min-h-[180px] flex-1 items-center justify-center p-1.5 sm:min-h-[220px] sm:p-2 md:min-h-[240px] xl:min-h-[260px]">
+              <img
+                src={portfolioImages[0].src.startsWith('/') ? `${baseUrl}${portfolioImages[0].src}` : `${baseUrl}/${portfolioImages[0].src}`}
+                alt={portfolioImages[0].alt}
+                loading="lazy"
+                width="520"
+                height="280"
+                class="max-h-full w-full object-contain rounded-lg"
+              />
+            </div>
+          </a>
+          <a
+            href={portfolioImages[1].href}
+            class="group/card relative z-10 flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden rounded-2xl border-2 border-zinc-200/60 bg-zinc-100/80 dark:bg-zinc-800/80 shadow-lg transition-all duration-300 ease-out hover:scale-[1.02] hover:border-mint-400/40 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-mint-400/50 focus:ring-offset-2 dark:border-zinc-700/60 dark:hover:border-mint-500/40 dark:focus:ring-offset-zinc-900"
+            aria-label={portfolioImages[1].alt}
+          >
+            <div class="flex min-h-[180px] flex-1 items-center justify-center p-1.5 sm:min-h-[220px] sm:p-2 md:min-h-[240px] xl:min-h-[260px]">
+              <img
+                src={portfolioImages[1].src.startsWith('/') ? `${baseUrl}${portfolioImages[1].src}` : `${baseUrl}/${portfolioImages[1].src}`}
+                alt={portfolioImages[1].alt}
+                loading="lazy"
+                width="400"
+                height="280"
+                class="max-h-full w-full object-contain rounded-lg"
+              />
+            </div>
+          </a>
+        </div>
+        <!-- Fill bottom: quick links so the card doesn’t feel empty (z-50 above overlay) -->
+        <div class="relative z-50 mt-4 flex flex-wrap items-center gap-3 border-t border-zinc-200/50 dark:border-zinc-700/50 pt-4 max-md:mt-3 max-md:pt-3">
+          <a
+            href={`${baseUrl}/#projects`}
+            class="text-sm font-semibold text-riptide-600 dark:text-mint-400 hover:underline focus:outline-none focus:ring-2 focus:ring-mint-400/50 focus:ring-offset-2 dark:focus:ring-offset-zinc-900 rounded"
+          >
+            View all projects →
+          </a>
+          <span class="text-zinc-300 dark:text-zinc-600" aria-hidden="true">·</span>
+          <span class="text-sm text-zinc-500 dark:text-zinc-400">React · Node · TypeScript</span>
+        </div>
       </article>
     </div>
   </div>
