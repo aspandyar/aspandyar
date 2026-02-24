@@ -72,4 +72,6 @@ The purpose of Finance Hub is to provide a comprehensive yet intuitive platform 
 
 Ready to take control of your finances? Let's get started.
 
-[View on GitHub](https://github.com/aspandyar/finance-hub)
+Finance Hub repos:
+- [frontend](https://github.com/aspandyar/finance-hub)
+- [backend](https://github.com/aspandyar/finance-hub-backend)
