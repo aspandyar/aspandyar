@@ -1,7 +1,7 @@
 ---
 layout:  /src/layouts/ProjectLayout.astro
 title: 'Finance Hub'
-pubDate: 2025-01-16
+pubDate: 2026-04-30
 description: 'Finance Hub is a modern, full-stack personal finance management application designed to help users take complete control of their financial life.'
 languages: ["react", "ts", "vite", "tailwind", "node", "express", "prisma", "postgres"]
 image:
@@ -72,4 +72,6 @@ The purpose of Finance Hub is to provide a comprehensive yet intuitive platform 
 
 Ready to take control of your finances? Let's get started.
 
-[View on GitHub](https://github.com/aspandyar/finance-hub)
+Finance Hub repos:
+- [frontend](https://github.com/aspandyar/finance-hub)
+- [backend](https://github.com/aspandyar/finance-hub-backend)

@@ -1,7 +1,7 @@
 ---
 layout:  /src/layouts/ProjectLayout.astro
 title: 'TextOps'
-pubDate: 2026-02-21
+pubDate: 2026-04-29
 description: 'TextOps is a full-stack text operations dashboard for processing text files with Word Count, Remove Duplicates, Clean Trash, and Sort Numbers—with real-time job status and result summaries.'
 languages: ["react", "node", "express", "vite", "postgres"]
 image:

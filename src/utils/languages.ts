@@ -16,7 +16,11 @@ export const languages: Record<string, Language> = {
   },
   golang: {
     name: "Golang",
-    iconName: "golang", 
+    iconName: "go", 
+  },
+  go: {
+    name: "Go",
+    iconName: "go",
   },
   java: {
     name: "Java",
@@ -71,6 +75,10 @@ export const languages: Record<string, Language> = {
   mysql: {
     name: "MySQL",
     iconName: "mysql",
+  },
+  sqlite: {
+    name: "SQLite",
+    iconName: "sqlite",
   },
 
   // Version Control & Documentation
