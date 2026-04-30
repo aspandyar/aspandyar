@@ -1,7 +1,7 @@
 ---
 layout:  /src/layouts/ProjectLayout.astro
 title: 'Finance Hub'
-pubDate: 2025-01-16
+pubDate: 2026-04-30
 description: 'Finance Hub is a modern, full-stack personal finance management application designed to help users take complete control of their financial life.'
 languages: ["react", "ts", "vite", "tailwind", "node", "express", "prisma", "postgres"]
 image:
